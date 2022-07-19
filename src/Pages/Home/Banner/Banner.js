@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Banner.css';
 import 'animate.css';
+import useLoading from '../../../hooks/useLoading';
 
 const Banner = () => {
     const [start, setStart] = useState();
+    const [loading] = useLoading();
+    
+    useEffect(() =>{
+        if(!loading){
+            setStart(true)
+        }
+    },[loading])
+
     return (
         <div>
             <div className="carousel w-full">
