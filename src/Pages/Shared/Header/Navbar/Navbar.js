@@ -1,11 +1,12 @@
 import { faBasketShopping, faGear, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import logo from '../../../../images/logo.png';
+import { Link } from 'react-router-dom';
+import logo from '../../../../images/Navbar/logo.png';
 
 const Navbar = () => {
     return (
-        <div className=' mt-[15px]'>
+        <div className='mb-[7px]'>
             <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -30,24 +31,24 @@ const Navbar = () => {
                     <img className='mt-[-14px]' src={logo} alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal p-0 uppercase">
-                        <li className='hover:text-[#f1ab08]'><a>Home</a></li>
-                        <li className='hover:text-[#f1ab08]'><a>Shop</a></li>
-                        <li className='hover:text-[#f1ab08]'><a>Blogs</a></li>
-                        <li className='hover:text-[#f1ab08]'><a>Contact Us</a></li>
-                        <li className='hover:text-[#f1ab08]'><a>About Us</a></li>
-                        <li className='hover:text-[#f1ab08]'><a>Login</a></li>
+                    <ul className="menu menu-horizontal p-0 uppercase mt-[9px] text-[#333333]">
+                        <li className='hover:text-primary'><Link to='/'>Home</Link></li>
+                        <li className='hover:text-primary'><a>Shop</a></li>
+                        <li className='hover:text-primary'><a>Blogs</a></li>
+                        <li className='hover:text-primary'><a>Contact Us</a></li>
+                        <li className='hover:text-primary'><a>About Us</a></li>
+                        <li className='hover:text-primary'><a>Login</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <button className=" btn-circle">
-                    <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-[#f1ab08]' icon={faGear} />
+                    <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faGear} />
                     </button>
                     <button className="btn-circle">
-                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-[#f1ab08]' icon={faHeart}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='mt-[3px] text-2xl text-[#9d9d9d] hover:text-primary' icon={faHeart}></FontAwesomeIcon>
                     </button>
                     <button className="btn-circle">
-                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-[#f1ab08]' icon={faBasketShopping}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faBasketShopping}></FontAwesomeIcon>
                     </button>
                 </div>
             </div>

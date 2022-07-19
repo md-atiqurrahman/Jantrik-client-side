@@ -1,0 +1,24 @@
+.banner-title {
+    font-family: 'Lily Script One', cursive;
+    font-size: 36px;
+    color: #363f4d;
+    margin-bottom: 3px;
+}
+.banner-sub-title{
+    font-family: 'Rubik', sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.slider-btn{
+    font-size: 0;
+    height: 14px;
+    width: 14px;
+    line-height: 14px;
+    border: 2px solid #f1ac06;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider-btn:hover{
+    background-color: #f1ac06;
+}
