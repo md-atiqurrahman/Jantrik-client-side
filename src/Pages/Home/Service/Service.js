@@ -1,0 +1,51 @@
+import React from 'react';
+import img1 from '../../../images/Service/delivery.png';
+import img2 from '../../../images/Service/support.png';
+import img3 from '../../../images/Service/return.png';
+import img4 from '../../../images/Service/discount.png';
+
+const Service = () => {
+    return (
+        <div className='flex justify-evenly mb-[60px]'>
+            <div className='flex justify-center items-center '>
+                <div>
+                    <img src={img1} alt="" /> 
+                </div>
+                <div className='ml-[20px]'>
+                    <h1 className="title font-medium text-[14px] my-[5px]">FREE DELIVERY</h1>
+                    <p className='title font-normal text-[13px]'>Free shipping on all order</p>
+                </div>
+            </div>
+            <div className='flex justify-center items-center '>
+                <div>
+                    <img src={img2} alt="" /> 
+                </div>
+                <div className='ml-[20px]'>
+                    <h1 className="title font-medium text-[14px] my-[5px]">ONLINE SUPPORT 24/7</h1>
+                    <p className='title font-normal text-[13px]'>Support online 24 hours</p>
+                </div>
+            </div>
+            <div className='flex justify-center items-center '>
+                <div>
+                    <img src={img3} alt="" /> 
+                </div>
+                <div className='ml-[20px]'>
+                    <h1 className="title font-medium text-[14px] my-[5px]">MONEY RETURN</h1>
+                    <p className='title font-normal text-[13px]'>Back guarantee under 7 days</p>
+                </div>
+            </div>
+            <div className='flex justify-center items-center '>
+                <div>
+                    <img src={img4} alt="" /> 
+                </div>
+                <div className='ml-[20px]'>
+                    <h1 className="title font-medium text-[14px] my-[5px]">MEMBER DISCOUNT</h1>
+                    <p className='title font-normal text-[13px]'>Onevery order over $30.00</p>
+                </div>
+            </div>
+            
+        </div>
+    );
+};
+
+export default Service;
