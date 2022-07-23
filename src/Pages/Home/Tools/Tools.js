@@ -9,15 +9,15 @@ const Tools = () => {
                 <h1 className='title text-[18px] '>Tools</h1>
             </div>
             <div className='flex justify-between'>
-                <div className="single-product relative">
+                <div className="single-product">
                     <img src={img1} alt="" />
                     <div className='product-details'>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] " />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]"/>
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]"  />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked/>
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked />
                         </div>
                         <p className='title text-[20px] font-medium  mb-[5px]'>Jigsaw</p>
                         <p className='title text-[16px]  font-medium'>Price: $32.00</p>
@@ -34,10 +34,10 @@ const Tools = () => {
                     <div className='product-details'>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] " />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]"/>
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]"  />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked/>
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked />
                         </div>
                         <p className='title text-[20px] font-medium  mb-[5px]'>Jigsaw</p>
                         <p className='title text-[16px]  font-medium'>Price: $32.00</p>
@@ -54,10 +54,10 @@ const Tools = () => {
                     <div className='product-details'>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] " />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]"/>
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]"  />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked/>
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked />
                         </div>
                         <p className='title text-[20px] font-medium  mb-[5px]'>Jigsaw</p>
                         <p className='title text-[16px]  font-medium'>Price: $32.00</p>
@@ -74,10 +74,10 @@ const Tools = () => {
                     <div className='product-details'>
                         <div class="rating">
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] " />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]"/>
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]"  />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked/>
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#f9ba48] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#444444] h-[15px] w-[15px] ml-[7px]" checked />
                         </div>
                         <p className='title text-[20px] font-medium  mb-[5px]'>Jigsaw</p>
                         <p className='title text-[16px]  font-medium'>Price: $32.00</p>
