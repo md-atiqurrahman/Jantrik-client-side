@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../images/Navbar/logo.png';
+import './Navbar.css';
 
 const Navbar = () => {
+    
     return (
-        <div className='mb-[7px]'>
-            <div className="navbar bg-base-100 ">
+        <div className='header'>
+            <div className="navbar bg-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -42,7 +44,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <button className=" btn-circle">
-                    <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faGear} />
+                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faGear} />
                     </button>
                     <button className="btn-circle">
                         <FontAwesomeIcon className='mt-[3px] text-2xl text-[#9d9d9d] hover:text-primary' icon={faHeart}></FontAwesomeIcon>

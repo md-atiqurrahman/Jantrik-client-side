@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-banner1': "url('/src/images/Banner/HandSaw.png')",
-        'bg-banner2': "url('/src/images/Banner/DrillMachine.png')",
+        'bg-banner1': "url('/src/images/Banner/HandSaw.jpg')",
+        'bg-banner2': "url('/src/images/Banner/DrillMachine.jpg')",
         'bg-footer': "url('/src/assets/images/footer.png')",
       }
     }

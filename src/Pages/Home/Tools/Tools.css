@@ -1,0 +1,45 @@
+.title{
+    font-family: 'Rubik', sans-serif;
+    color: #363f4d;
+}
+.single-product{
+    background: white;
+    width: 270px;
+    padding: 15px 15px 30px 15px;
+    border: 1px solid transparent;
+}
+.single-product:hover{
+    border: 1px solid #dddddd;
+}
+.single-product:hover img{
+    opacity: 0.2;
+}
+.product-details{
+    text-align: center;
+}
+
+.product-info{
+    position: absolute;
+    top: 6%;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    overflow: hidden;
+}
+.single-product:hover .product-info{
+    opacity: 1;
+}
+.buy-btn{
+    background:  #f1ac06;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.single-product:hover .buy-btn {
+    visibility: visible;
+}
