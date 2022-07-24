@@ -1,5 +1,6 @@
 import React from 'react';
 import useLoading from '../../../hooks/useLoading';
+import Footer from '../../Shared/Footer/Footer';
 import Loading from '../../Shared/Loading/Loading';
 import Banner from '../Banner/Banner';
 import NewArrivals from '../NewArrivals/NewArrivals';
@@ -28,6 +29,7 @@ const Home = () => {
             <BestSellerProducts></BestSellerProducts>
             <Blog></Blog>
             <Brand></Brand>
+            <Footer></Footer>
         </div>
     );
 };

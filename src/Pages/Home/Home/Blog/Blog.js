@@ -23,14 +23,14 @@ const Blog = () => {
                 </div>
             </div>
             <div className='flex justify-between'>
-                <div class="w-[370px] bg-base-100">
+                <div className="w-[370px] bg-base-100">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img1} className="w-full mb-[18px]" alt="drill machine" />
                         </a>
                     </div>
                     <div >
-                        <h2 class="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
+                        <h2 className="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
                             We test our products then we prepare it fo...
                         </h2>
                         <div className="author">
@@ -50,14 +50,14 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div class="w-[370px] bg-base-100">
+                <div className="w-[370px] bg-base-100">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img2} className="w-full mb-[18px]" alt="drill machine" />
                         </a>
                     </div>
                     <div >
-                        <h2 class="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
+                        <h2 className="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
                             We test our products then we prepare it fo...
                         </h2>
                         <div className="author">
@@ -77,14 +77,14 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div class="w-[370px] bg-base-100">
+                <div className="w-[370px] bg-base-100">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img3} className="w-full mb-[18px]" alt="drill machine" />
                         </a>
                     </div>
                     <div >
-                        <h2 class="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
+                        <h2 className="title hover:text-[#f1ac06] text-[18px] leading-[25px] mb-[5px] font-medium cursor-pointer">
                             We test our products then we prepare it fo...
                         </h2>
                         <div className="author">
