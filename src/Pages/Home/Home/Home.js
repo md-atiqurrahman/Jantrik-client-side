@@ -6,6 +6,7 @@ import NewArrivals from '../NewArrivals/NewArrivals';
 import Service from '../Service/Service';
 import Tools from '../Tools/Tools';
 import BestSellerProducts from './BestSellerProducts/BestSellerProducts';
+import Blog from './Blog/Blog';
 import NewToolsBanner from './NewToolsBanner/NewToolsBanner';
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             <NewToolsBanner></NewToolsBanner>
             <Service></Service>
             <BestSellerProducts></BestSellerProducts>
+            <Blog></Blog>
         </div>
     );
 };

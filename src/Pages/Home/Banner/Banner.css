@@ -1,12 +1,10 @@
 .banner-title {
     font-family: 'Lily Script One', cursive;
     font-size: 36px;
-    color: #363f4d;
     margin-bottom: 3px;
 }
 
 .banner-sub-title {
-    font-family: 'Rubik', sans-serif;
     font-size: 48px;
     line-height: 60px;
 }

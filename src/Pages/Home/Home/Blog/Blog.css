@@ -1,0 +1,20 @@
+.blog-img a{
+    position: relative;
+    display: block;
+}
+
+.blog-img a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.blog-img:hover a:before{
+    opacity: 0.5;
+}

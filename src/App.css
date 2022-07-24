@@ -1,4 +1,7 @@
-
+.App{
+  font-family: 'Rubik', sans-serif;
+  color: #363f4d;
+}
 
 .App-logo {
   height: 40vmin;
