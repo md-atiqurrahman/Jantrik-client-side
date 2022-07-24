@@ -40,7 +40,7 @@ const Service = () => {
                 </div>
                 <div className='ml-[20px]'>
                     <h1 className="title font-medium text-[14px] my-[5px]">MEMBER DISCOUNT</h1>
-                    <p className='title font-normal text-[13px]'>Onevery order over $30.00</p>
+                    <p className='title font-normal text-[13px]'>Onevery order over $3579.00</p>
                 </div>
             </div>
             

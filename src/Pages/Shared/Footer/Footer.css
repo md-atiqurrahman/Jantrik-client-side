@@ -1,0 +1,22 @@
+.f-title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 26px;
+}
+.contact{
+    padding-bottom: 24px;
+}
+.contact p{
+    font-size: 15px;
+    color: #555555;
+    margin-top: 6px;
+}
+.footer-details p{
+    font-size: 15px;
+    color: #555555;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.footer-details p:hover{
+    color: #f1ac06;
+}
