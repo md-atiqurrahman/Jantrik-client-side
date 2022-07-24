@@ -8,8 +8,8 @@ import './Navbar.css';
 const Navbar = () => {
     
     return (
-        <div className='header'>
-            <div className="navbar bg-white">
+        <div className='header bg-white'>
+            <div className="navbar container w-full mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">

@@ -7,6 +7,7 @@ import Service from '../Service/Service';
 import Tools from '../Tools/Tools';
 import BestSellerProducts from './BestSellerProducts/BestSellerProducts';
 import Blog from './Blog/Blog';
+import Brand from './Brand/Brand';
 import NewToolsBanner from './NewToolsBanner/NewToolsBanner';
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
             <Service></Service>
             <BestSellerProducts></BestSellerProducts>
             <Blog></Blog>
+            <Brand></Brand>
         </div>
     );
 };
