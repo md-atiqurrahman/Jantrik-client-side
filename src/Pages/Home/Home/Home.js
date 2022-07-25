@@ -3,6 +3,7 @@ import useLoading from '../../../hooks/useLoading';
 import Footer from '../../Shared/Footer/Footer';
 import Loading from '../../Shared/Loading/Loading';
 import Banner from '../Banner/Banner';
+import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import NewArrivals from '../NewArrivals/NewArrivals';
 import Service from '../Service/Service';
 import Tools from '../Tools/Tools';
@@ -29,6 +30,7 @@ const Home = () => {
             <BestSellerProducts></BestSellerProducts>
             <Blog></Blog>
             <Brand></Brand>
+            <BusinessSummary></BusinessSummary>
             <Footer></Footer>
         </div>
     );

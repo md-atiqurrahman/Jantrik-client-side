@@ -5,7 +5,7 @@ import img1 from '../../../../images/BestSellerProducts/1.jpg';
 
 const BestSellerProducts = () => {
     return (
-        <div className='ml-[90px] mr-[90px] relative mb-[50px]'>
+        <div className='mx-[90px] mb-[50px]'>
             <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[4px]'>
                 <div>
                     <h1 className='title text-[18px] '>Best Seller Products</h1>
