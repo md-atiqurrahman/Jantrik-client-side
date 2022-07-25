@@ -5,6 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 import Banner from '../Banner/Banner';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import NewArrivals from '../NewArrivals/NewArrivals';
+import Reviews from '../Reviews/Reviews';
 import Service from '../Service/Service';
 import Tools from '../Tools/Tools';
 import BestSellerProducts from './BestSellerProducts/BestSellerProducts';
@@ -28,9 +29,10 @@ const Home = () => {
             <NewToolsBanner></NewToolsBanner>
             <Service></Service>
             <BestSellerProducts></BestSellerProducts>
-            <Blog></Blog>
             <Brand></Brand>
             <BusinessSummary></BusinessSummary>
+            <Blog></Blog>
+            <Reviews></Reviews>
             <Footer></Footer>
         </div>
     );

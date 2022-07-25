@@ -11,7 +11,7 @@ const BusinessSummary = () => {
         <div className='mx-[90px] mb-[60px]'>
             <div className=' mb-[60px]'>
                 <div className='border border-[#dddddd] py-[10px] text-center '>
-                    <h1 className='title text-[18px] '>Business Summary</h1>
+                    <h1 className='title text-[18px] '>Our Business Summary</h1>
                 </div>
             </div>
             <div className='text-center'>
