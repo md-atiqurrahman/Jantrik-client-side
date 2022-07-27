@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { faGreaterThan, faLessThan} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Tools.css';
-import img1 from '../../../images/Tools/6.jpg';
+import Tool from '../Home/Tool/Tool';
 
 const Tools = () => {
+    const [tools , setTools] = useState([]);
+
+    useEffect(() =>{
+        fetch('items.json')
+        .then(res => res.json())
+        .then(data => setTools(data))
+    },[])
+
     return (
         <div className='ml-[90px] mr-[90px] mb-[30px] relative'>
             <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px]'>
@@ -20,87 +28,13 @@ const Tools = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between'>
-                <div className="single-product">
-                    <img src={img1} alt="" />
-                    <div className='product-details'>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] " />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                        </div>
-                        <p className=' text-[16px] font-medium  mb-[5px]'>Product Name : Jigsaw</p>
-                        <p className=' text-[16px]  font-medium'>Price: $32.00</p>
-                        <button className='buy-btn'>Buy Now</button>
-                    </div>
-                    <div className='product-info text-[17px]'>
-                        <h4>Available: <span className='text-[16px] '> 12506 Pieces</span></h4>
-                        <h4>Min. Order Quantity: <span className='text-[16px]'>279 Pieces</span></h4>
-                        <p>Description: <span className='text-[16px]'> Jigsaw is best for as a WoodSharpener.This is one of the Latest model of the world .We are the first company to make it more latest.</span></p>
-                    </div>
-                </div>
-                <div className="single-product relative">
-                    <img src={img1} alt="" />
-                    <div className='product-details'>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] " />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                        </div>
-                        <p className=' text-[16px] font-medium  mb-[5px]'>Product Name : Jigsaw</p>
-                        <p className=' text-[16px]  font-medium'>Price: $32.00</p>
-                        <button className='buy-btn'>Buy Now</button>
-                    </div>
-                    <div className='product-info text-[17px]'>
-                        <h4>Available: <span className='text-[16px] '> 12506 Pieces</span></h4>
-                        <h4>Min. Order Quantity: <span className='text-[16px]'>279 Pieces</span></h4>
-                        <p>Description: <span className='text-[16px]'> Jigsaw is best for as a WoodSharpener.This is one of the Latest model of the world .We are the first company to make it more latest.</span></p>
-                    </div>
-                </div>
-                <div className="single-product relative">
-                    <img src={img1} alt="" />
-                    <div className='product-details'>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] " />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                        </div>
-                        <p className=' text-[16px] font-medium  mb-[5px]'>Product Name : Jigsaw</p>
-                        <p className=' text-[16px]  font-medium'>Price: $32.00</p>
-                        <button className='buy-btn'>Buy Now</button>
-                    </div>
-                    <div className='product-info text-[17px]'>
-                        <h4>Available: <span className='text-[16px] '> 12506 Pieces</span></h4>
-                        <h4>Min. Order Quantity: <span className='text-[16px]'>279 Pieces</span></h4>
-                        <p>Description: <span className='text-[16px]'> Jigsaw is best for as a WoodSharpener.This is one of the Latest model of the world .We are the first company to make it more latest.</span></p>
-                    </div>
-                </div>
-                <div className="single-product relative">
-                    <img src={img1} alt="" />
-                    <div className='product-details'>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] " />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#444444] h-[14px] w-[14px] ml-[7px]" />
-                        </div>
-                        <p className=' text-[16px] font-medium  mb-[5px]'>Product Name : Jigsaw</p>
-                        <p className=' text-[16px]  font-medium'>Price: $32.00</p>
-                        <button className='buy-btn'>Buy Now</button>
-                    </div>
-                    <div className='product-info text-[17px]'>
-                        <h4>Available: <span className='text-[16px] '> 12506 Pieces</span></h4>
-                        <h4>Min. Order Quantity: <span className='text-[16px]'>279 Pieces</span></h4>
-                        <p>Description: <span className='text-[16px]'> Jigsaw is best for as a WoodSharpener.This is one of the Latest model of the world .We are the first company to make it more latest.</span></p>
-                    </div>
-                </div>
+            <div className='grid grid-cols-3 justify-items-center gap-y-[10px]'>
+                {
+                    tools.map( tool => <Tool
+                    key={tool._id}
+                    tool = {tool}
+                    ></Tool>)
+                }
             </div>
         </div>
     );

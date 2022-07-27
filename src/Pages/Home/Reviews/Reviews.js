@@ -22,12 +22,12 @@ const Reviews = () => {
                 </div>
             </div>
             <div className='grid grid-cols-3 gap-x-6'>
-                <div class="card max-w-sm bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <p className='text-[#555555]'>This is very good carpenter manufacturer company .Their product is quite good and long lasting and easy to use.</p>
-                        <div class="card-actions justify-start items-center mt-[20px]">
-                            <div class="avatar mr-[20px]">
-                                <div class="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <div className="card-actions justify-start items-center mt-[20px]">
+                            <div className="avatar mr-[20px]">
+                                <div className="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={img1} alt='' />
                                 </div>
                             </div>
@@ -38,12 +38,12 @@ const Reviews = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card max-w-sm bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <p className='text-[#555555]'>This is very good carpenter manufacturer company .Their product is quite good and long lasting and easy to use.</p>
-                        <div class="card-actions justify-start items-center mt-[20px]">
-                            <div class="avatar mr-[20px]">
-                                <div class="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <div className="card-actions justify-start items-center mt-[20px]">
+                            <div className="avatar mr-[20px]">
+                                <div className="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={img2} alt='' />
                                 </div>
                             </div>
@@ -54,12 +54,12 @@ const Reviews = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card max-w-sm bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card max-w-sm bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <p className='text-[#555555]'>This is very good carpenter manufacturer company .Their product is quite good and long lasting and easy to use.</p>
-                        <div class="card-actions justify-start items-center mt-[20px]">
-                            <div class="avatar mr-[20px]">
-                                <div class="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <div className="card-actions justify-start items-center mt-[20px]">
+                            <div className="avatar mr-[20px]">
+                                <div className="w-[64px] rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={img3} alt='' />
                                 </div>
                             </div>

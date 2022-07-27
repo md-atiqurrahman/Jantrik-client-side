@@ -12,12 +12,12 @@ const Footer = () => {
     return (
         <footer className='bg-[#f9f9fb] pt-[50px]'>
             <div className='text-center w-full'>
-                <div class="form-control  text-center w-[35%] mx-auto mb-[20px]">
+                <div className="form-control  text-center w-[35%] mx-auto mb-[20px]">
                     <h1 className='text-[30px] font-normal mb-[3px]'>Sign Up For Newsletters</h1>
                     <p className='text-[16px] leading-[26px] mb-[25px]'>Get e-mail updates about our latest Deal and special offers.</p>
-                    <div class="relative">
-                        <input type="text" placeholder="Enter your email address" class="input rounded-full input-bordered w-full pr-16" />
-                        <button class="btn btn-primary absolute top-0 right-0 rounded-l-none rounded-r-full text-[12px] hover:bg-[#363f4d] hover:text-white">Subscribe</button>
+                    <div className="relative">
+                        <input type="text" placeholder="Enter your email address" className="input rounded-full input-bordered w-full pr-16" />
+                        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none rounded-r-full text-[12px] hover:bg-[#363f4d] hover:text-white">Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -81,11 +81,11 @@ const Footer = () => {
                     <p>Manage</p>
                 </div>
             </div>
-            <div class="footer items-center py-4 px-[90px] bg-[#eeeeee] text-neutral-content">
-                <div class="items-center grid-flow-col">
+            <div className="footer items-center py-4 px-[90px] bg-[#eeeeee] text-neutral-content">
+                <div className="items-center grid-flow-col">
                     <p className='text-[#333]'>Copyright © {ThisYear}  Jantrik - All right reserved</p>
                 </div>
-                <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                     <p className='text-[#333] hover:text-primary cursor-pointer text-[14px]'><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></p>
                     <p className='text-[#333] hover:text-primary cursor-pointer text-[14px]'><FontAwesomeIcon icon={faWifi}></FontAwesomeIcon></p>
                     <p className='text-[#333] hover:text-primary cursor-pointer text-[15px]'><FontAwesomeIcon icon={faGooglePlusG}></FontAwesomeIcon></p>

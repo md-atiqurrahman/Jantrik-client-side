@@ -5,7 +5,7 @@ import 'animate.css';
 const Banner = () => {
 
     return (
-           <div className='overflow-hidden mt-[60px] mb-[60px]'>
+           <div className='overflow-hidden mt-0 mb-[60px]'>
             <div className="hero justify-start lg:min-h-[394px]  bg-[url('/src/images/Banner/HandSaw.jpg')] lg:mt-3 items-start lg:items-center">
                 <div className="hero-content justify-start flex-col lg:flex-row-reverse">
                     <div className='lg:ml-[74px] lg:mr-6'>
