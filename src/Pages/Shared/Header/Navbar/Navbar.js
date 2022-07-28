@@ -39,7 +39,7 @@ const Navbar = () => {
                         <li className='hover:text-primary'><a>Blogs</a></li>
                         <li className='hover:text-primary'><a>Contact Us</a></li>
                         <li className='hover:text-primary'><a>About Us</a></li>
-                        <li className='hover:text-primary'><a>Login</a></li>
+                        <li className='hover:text-primary'><Link to='/login'>Login</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
