@@ -14,7 +14,7 @@ const Navbar = () => {
     const LogOut = () => {
         signOut(auth);
     }
-
+    
     return (
         <div className='header'>
             <div className="navbar bg-base-100 ">
@@ -46,22 +46,14 @@ const Navbar = () => {
                         <li className='hover:text-primary'><a>Shop</a></li>
                         <li className='hover:text-primary'><a>Blogs</a></li>
                         <li className='hover:text-primary'><a>Contact Us</a></li>
-                        <li className='hover:text-primary'><a>About Us</a></li>
+                        <li className='hover:text-primary'><a>Dashboard</a></li>
                         <li className='hover:text-primary'>
                             {user ? <Link to='/home' onClick={LogOut}>Sign Out</Link> : <Link to='/login'>Login</Link>}
                         </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className=" btn-circle">
-                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faGear} />
-                    </button>
-                    <button className="btn-circle">
-                        <FontAwesomeIcon className='mt-[3px] text-2xl text-[#9d9d9d] hover:text-primary' icon={faHeart}></FontAwesomeIcon>
-                    </button>
-                    <button className="btn-circle">
-                        <FontAwesomeIcon className='text-2xl text-[#9d9d9d] hover:text-primary' icon={faBasketShopping}></FontAwesomeIcon>
-                    </button>
+                    <p className='text-[16px] hover:text-primary pt-[8px]'>{user?.displayName}</p>
                 </div>
             </div>
         </div>
