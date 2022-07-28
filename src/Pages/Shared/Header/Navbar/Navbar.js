@@ -1,12 +1,20 @@
 import { faBasketShopping, faGear, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../../firebase.init';
 import logo from '../../../../images/Navbar/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-    
+    const [user] = useAuthState(auth);
+
+    const LogOut = () => {
+        signOut(auth);
+    }
+
     return (
         <div className='header'>
             <div className="navbar bg-base-100 ">
@@ -39,7 +47,9 @@ const Navbar = () => {
                         <li className='hover:text-primary'><a>Blogs</a></li>
                         <li className='hover:text-primary'><a>Contact Us</a></li>
                         <li className='hover:text-primary'><a>About Us</a></li>
-                        <li className='hover:text-primary'><Link to='/login'>Login</Link></li>
+                        <li className='hover:text-primary'>
+                            {user ? <Link to='/home' onClick={LogOut}>Sign Out</Link> : <Link to='/login'>Login</Link>}
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
