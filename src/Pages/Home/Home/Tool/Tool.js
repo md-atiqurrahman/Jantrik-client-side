@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Tool = ({tool}) => {
-    const {_id,name, image , price, minimum,available,description} = tool;
+const Tool = ({ tool }) => {
+    const { _id, name, image, price, minimum, available, description } = tool;
 
     return (
         <div className="single-product">
@@ -21,7 +21,16 @@ const Tool = ({tool}) => {
             <div className='product-info text-[17px]'>
                 <h4>Available: <span className='text-[16px] '> {available} Pieces</span></h4>
                 <h4>Min. Order Quantity: <span className='text-[16px]'> {minimum} Pieces</span></h4>
-                <p>Description: <span className='text-[16px]'>{description.length}</span></p>
+                <div className='mb-[10px]'>
+                    {
+                        description.length <= 136
+                            ?
+                            <p>Description: <span className='text-[16px]'>{description}</span></p>
+                            :
+                            <p>Description: <span className='text-[16px]'>{description.slice(0, 136) + '...'}</span></p>
+                    }
+
+                </div>
                 <Link to={`/purchase/${_id}`}><button className='buy-btn'>Buy Now</button></Link>
             </div>
         </div>
