@@ -14,7 +14,7 @@ const Navbar = () => {
     const LogOut = () => {
         signOut(auth);
     }
-    
+
     return (
         <div className='header'>
             <div className="navbar bg-base-100 ">
@@ -46,7 +46,9 @@ const Navbar = () => {
                         <li className='hover:text-primary'><a>Shop</a></li>
                         <li className='hover:text-primary'><a>Blogs</a></li>
                         <li className='hover:text-primary'><a>Contact Us</a></li>
-                        <li className='hover:text-primary'><a>Dashboard</a></li>
+                        {
+                            user && <li className='hover:text-primary'><Link to='/dashboard'>Dashboard</Link></li>
+                        }
                         <li className='hover:text-primary'>
                             {user ? <Link to='/home' onClick={LogOut}>Sign Out</Link> : <Link to='/login'>Login</Link>}
                         </li>

@@ -42,24 +42,24 @@
 
 .buy-btn {
     background: #f1ac06;
-    color: white;;
+    color: white;
+    ;
     border-radius: 3px;
     text-transform: uppercase;
     padding: 5px 15px;
     cursor: pointer;
-    font-size: 14px; 
+    font-size: 14px;
 }
 .buy-btn:disabled,
-.buy-btn[disabled]
-{
+.buy-btn[disabled] {
     opacity: 0.35;
     pointer-events: none;
 }
 
-.star-rating{
+.star-rating {
     visibility: visible;
 }
 
-.single-product:hover .star-rating{
+.single-product:hover .star-rating {
     visibility: hidden;
 }
