@@ -8,9 +8,8 @@ const DashBoard = () => {
     return (
         <div className="drawer drawer-mobile">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col">
+            <div className="drawer-content flex flex-col mt-[17px]">
                 {/* <!-- Page content here --> */}
-                <h2 className='text-3xl text-purple-500 font-bold  mb-[15px]'>Welcome to my Dashboard</h2>
                 <Outlet />
             </div>
             <div className="drawer-side sticky">

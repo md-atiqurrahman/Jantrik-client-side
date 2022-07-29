@@ -72,7 +72,7 @@ const PurchaseTool = () => {
                 </div>
             </div>
             {
-                order && <OrderModal order={order}></OrderModal>
+                order && <OrderModal order={order} setOrder={setOrder}></OrderModal>
             }
             <Footer></Footer>
         </section>
