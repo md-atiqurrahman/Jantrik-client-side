@@ -11,11 +11,13 @@ const OrderModal = ({ order, setOrder }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        const totalPrice = price * event.target.quantity.value?.split(' ')[0];
 
         const bookingOrder = {
             toolId: _id,
             toolName: name,
             price,
+            totalPrice,
             quantity: event.target.quantity.value,
             userEmail: user?.email,
             userName: user?.displayName,

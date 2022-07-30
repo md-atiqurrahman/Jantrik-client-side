@@ -44,8 +44,9 @@ const MyOrders = () => {
                             <th>Tool Name</th>
                             <th>Price Per Unit</th>
                             <th>Quantity</th>
-                            <th>Cancel Order</th>
                             <th>Payment</th>
+                            <th>TransactionId</th>
+                            <th>Cancel Order</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,8 +56,17 @@ const MyOrders = () => {
                                 <td>{o.toolName}</td>
                                 <td>${o.price}</td>
                                 <td>{o?.quantity}</td>
-                                <td><label htmlFor="cancel-modal" onClick={ () => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label></td>
-                                <td><Link to={`/dashboard/payment/${o?._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link></td>
+                                <td>
+                                    {(o.totalPrice && !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
+                                    {(o.totalPrice && o.paid) && <span className='text-success uppercase'>Paid</span>}
+                                </td>
+                                <td>
+                                    {
+                                        (o?.totalPrice && o.paid) && <span
+                                            className='text-[#330000]'>{o.transactionId}</span>
+                                    }
+                                </td>
+                                <td>{(o.totalPrice && !o.paid) && <label htmlFor="cancel-modal" onClick={() => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label>}</td>
                             </tr>)
                         }
                     </tbody>
