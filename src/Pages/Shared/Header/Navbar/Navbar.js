@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 uppercase mt-[9px] text-[#333333]">
-                        <li className='hover:text-primary'><CustomLink as={Link} to='/home'>Home</CustomLink></li>
+                        <li className='hover:text-primary'><CustomLink as={Link} to='/'>Home</CustomLink></li>
                         <li className='hover:text-primary'><a>Shop</a></li>
                         <li className='hover:text-primary'><a>Blogs</a></li>
                         <li className='hover:text-primary'><CustomLink as={Link} to='/allReviews'>All Reviews</CustomLink></li>
