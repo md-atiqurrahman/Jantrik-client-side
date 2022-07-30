@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
+import useToken from '../../../hooks/useToken';
 
 
 const SignUp = () => {
@@ -27,17 +28,20 @@ const SignUp = () => {
         verificationError
     ] = useSendEmailVerification(auth);
 
+    const [token] = useToken(user || gUser)
+
     const navigate = useNavigate();
+    
 
     useEffect(() => {
         if (user || gUser) {
             navigate('/home')
         }
-    }, [user,gUser, navigate])
+    }, [user, gUser, navigate])
 
 
     if (loading || gLoading || updating || sending) {
-        return  <Loading></Loading>
+        return <Loading></Loading>
     }
 
     let setError;
@@ -53,6 +57,8 @@ const SignUp = () => {
         toast('Sent Email Verification')
         reset();
     };
+
+
 
 
     return (
