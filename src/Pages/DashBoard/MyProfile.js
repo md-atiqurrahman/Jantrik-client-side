@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading/Loading';
 
 const MyProfile = () => {
     const [active, setActive] = useState(false);
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
+
+    const { data: profile } = useQuery(['profile', user], () => fetch(`http://localhost:5000/userProfile?email=${user?.email}`)
+        .then(res => res.json()))
+
+    useEffect(() => {
+        if (profile?._id) {
+            setActive(true)
+        }
+    }, [profile])
 
     const onSubmit = async (data) => {
         if (data?.save) {
