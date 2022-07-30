@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 import logo from '../../../../images/Navbar/logo.png';
+import CustomLink from '../../CustomLink/CustomLink';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -42,15 +43,15 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 uppercase mt-[9px] text-[#333333]">
-                        <li className='hover:text-primary'><Link to='/'>Home</Link></li>
+                        <li className='hover:text-primary'><CustomLink as={Link} to='/home'>Home</CustomLink></li>
                         <li className='hover:text-primary'><a>Shop</a></li>
                         <li className='hover:text-primary'><a>Blogs</a></li>
-                        <li className='hover:text-primary'><a>Contact Us</a></li>
+                        <li className='hover:text-primary'><CustomLink as={Link} to='/allReviews'>All Reviews</CustomLink></li>
                         {
-                            user && <li className='hover:text-primary'><Link to='/dashboard'>Dashboard</Link></li>
+                            user && <li className='hover:text-primary'><CustomLink as={Link} to='/dashboard'>Dashboard</CustomLink></li>
                         }
                         <li className='hover:text-primary'>
-                            {user ? <Link to='/home' onClick={LogOut}>Sign Out</Link> : <Link to='/login'>Login</Link>}
+                            {user ? <CustomLink as={Link} to='/home' onClick={LogOut}>Sign Out</CustomLink> : <CustomLink as={Link} to='/login'>Login</CustomLink>}
                         </li>
                     </ul>
                 </div>

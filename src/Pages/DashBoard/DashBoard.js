@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
+import CustomLink from '../Shared/CustomLink/CustomLink';
 
 const DashBoard = () => {
     const [user] = useAuthState(auth);
@@ -16,9 +17,9 @@ const DashBoard = () => {
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto max-w-sm bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link to='/dashboard' >My Orders</Link></li>
-                    <li><Link to='/dashboard/review'>Add A Review</Link></li>
-                    <li><Link to='/dashboard/profile'>My Profile</Link></li>
+                    <li><CustomLink as={Link} to='/dashboard' >My Orders</CustomLink></li>
+                    <li><CustomLink as={Link} to='/dashboard/review'>Add A Review</CustomLink></li>
+                    <li><CustomLink as={Link} to='/dashboard/profile'>My Profile</CustomLink></li>
                 </ul>
 
             </div>
