@@ -13,6 +13,7 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import Review from './Pages/DashBoard/Review';
 import MyProfile from './Pages/DashBoard/MyProfile';
+import Payment from './Pages/DashBoard/Payment';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<Review></Review>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='payment/:orderId' element={<Payment></Payment>}></Route>
         </Route>
       </Routes>
       <ToastContainer />

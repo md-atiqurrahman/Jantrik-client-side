@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate, Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import CancelModal from './CancelModal';
@@ -44,6 +45,7 @@ const MyOrders = () => {
                             <th>Price Per Unit</th>
                             <th>Quantity</th>
                             <th>Cancel Order</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,6 +56,7 @@ const MyOrders = () => {
                                 <td>${o.price}</td>
                                 <td>{o?.quantity}</td>
                                 <td><label htmlFor="cancel-modal" onClick={ () => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label></td>
+                                <td><Link to={`/dashboard/payment/${o?._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link></td>
                             </tr>)
                         }
                     </tbody>
