@@ -11,7 +11,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: profile } = useQuery(['profile', user], () => fetch(`http://localhost:5000/userProfile?email=${user?.email}`)
+    const { data: profile } = useQuery(['profile', user], () => fetch(`https://vast-cove-21670.herokuapp.com/userProfile?email=${user?.email}`)
         .then(res => res.json()))
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const MyProfile = () => {
     const onSubmit = async (data) => {
         if (data?.save) {
             const { save, ...rest } = data;
-            fetch('http://localhost:5000/userProfile', {
+            fetch('https://vast-cove-21670.herokuapp.com/userProfile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const MyProfile = () => {
 
         if (data?.update) {
             const { update, ...rest } = data;
-            fetch(`http://localhost:5000/userProfile/${data.email}`, {
+            fetch(`https://vast-cove-21670.herokuapp.com/userProfile/${data.email}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

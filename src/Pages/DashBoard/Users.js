@@ -8,7 +8,7 @@ import UserRow from './UserRow';
 const Users = () => {
     const [user] = useAuthState(auth);
 
-    const { data: users, isLoading ,refetch } = useQuery(['users',user], () => fetch('http://localhost:5000/users', {
+    const { data: users, isLoading ,refetch } = useQuery(['users',user], () => fetch('https://vast-cove-21670.herokuapp.com/users', {
         method: 'GET'
     }).then(res => res.json()))
 

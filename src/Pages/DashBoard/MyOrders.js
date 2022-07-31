@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [confirm, setConfirm] = useState(null);
 
-    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`http://localhost:5000/orders?email=${user?.email}`)
+    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`https://vast-cove-21670.herokuapp.com/orders?email=${user?.email}`)
         .then(res => res.json()))
 
 
@@ -19,7 +19,7 @@ const MyOrders = () => {
     }
 
     const handleCancel = (id) => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://vast-cove-21670.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

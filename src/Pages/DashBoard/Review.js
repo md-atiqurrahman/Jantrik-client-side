@@ -34,7 +34,7 @@ const Review = () => {
 
                 // send review to database via server
 
-                fetch('http://localhost:5000/review', {
+                fetch('https://vast-cove-21670.herokuapp.com/review', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

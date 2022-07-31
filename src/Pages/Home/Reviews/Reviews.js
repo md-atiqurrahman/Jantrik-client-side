@@ -8,7 +8,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useState(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://vast-cove-21670.herokuapp.com/review')
             .then(res => res.json())
             .then(data => {
                 const recentReviews = data.slice(-6);

@@ -11,7 +11,7 @@ const PurchaseTool = () => {
     const { id } = useParams();
 
     useEffect(() => {
-          const url = `http://localhost:5000/tools/${id}`;
+          const url = `https://vast-cove-21670.herokuapp.com/tools/${id}`;
           fetch(url)
           .then(res => res.json())
           .then(data => {

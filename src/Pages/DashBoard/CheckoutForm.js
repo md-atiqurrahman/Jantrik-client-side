@@ -15,7 +15,7 @@ const CheckoutForm = ({order}) => {
     const { _id, totalPrice, userEmail, userName } = order;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://vast-cove-21670.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ const CheckoutForm = ({order}) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`http://localhost:5000/orders/${_id}`, {
+            fetch(`https://vast-cove-21670.herokuapp.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

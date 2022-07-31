@@ -35,7 +35,7 @@ const AddProduct = () => {
 
                 
 
-                fetch('http://localhost:5000/addProduct', {
+                fetch('https://vast-cove-21670.herokuapp.com/addProduct', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

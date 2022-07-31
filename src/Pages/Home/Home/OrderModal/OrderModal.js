@@ -25,7 +25,7 @@ const OrderModal = ({ order, setOrder }) => {
             address: event.target.address.value
         }
 
-        fetch('http://localhost:5000/bookingOrder', {
+        fetch('https://vast-cove-21670.herokuapp.com/bookingOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
