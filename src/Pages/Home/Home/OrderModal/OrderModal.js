@@ -4,7 +4,7 @@ import auth from '../../../../firebase.init';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const OrderModal = ({ order, setOrder }) => {
+const OrderModal = ({ order, setOrder ,admin }) => {
     const { _id, name, price,minimum, quantity } = order;
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
@@ -57,7 +57,9 @@ const OrderModal = ({ order, setOrder }) => {
                         <input type="email" name='email' readOnly value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='phone' placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='address' placeholder="Your Address" className="input input-bordered w-full max-w-xs" />
-                        <input type="submit" value='Order' className=" btn btn-accent input input-bordered w-full max-w-xs" />
+                        {
+                            !admin && <input type="submit" value='Order' className=" btn btn-accent input input-bordered w-full max-w-xs" />
+                        }
                     </form>
                 </div>
             </div>

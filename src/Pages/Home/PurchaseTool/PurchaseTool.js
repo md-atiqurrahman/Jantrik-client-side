@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import useAdmin from '../../../hooks/useAdmin';
 import Footer from '../../Shared/Footer/Footer';
 import OrderModal from '../Home/OrderModal/OrderModal';
 
 const PurchaseTool = () => {
+    const [user] = useAuthState(auth)
     const [tool, setTool] = useState({});
+    const [admin] = useAdmin(user);
     const { name, image, price, minimum, available, description } = tool;
     const [order, setOrder] = useState(null);
     const [active, setActive] = useState(false);
@@ -72,7 +77,7 @@ const PurchaseTool = () => {
                 </div>
             </div>
             {
-                order && <OrderModal order={order} setOrder={setOrder}></OrderModal>
+                order && <OrderModal order={order} setOrder={setOrder} admin={admin}></OrderModal>
             }
             <Footer></Footer>
         </section>
