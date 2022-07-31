@@ -22,7 +22,7 @@ const DashBoard = () => {
                     {
                         !admin &&
                         <>
-                            <li><CustomLink as={Link} to='/dashboard' >My Orders</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/orders' >My Orders</CustomLink></li>
                             <li><CustomLink as={Link} to='/dashboard/review'>Add A Review</CustomLink></li>
                         </>
                     }
