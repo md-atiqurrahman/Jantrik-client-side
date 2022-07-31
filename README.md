@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# Jantrik-Carpentry Tools Manufacturer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is a carpentry tools manufacturer website.You can wholesale and manage different
+items of carpentry tools in this website.
+
+My website [Live link](https://jantrik-45dcd.web.app/)
+.
+
+  * Description of different features and functionality of Jantrik
+
+       * I use custom hooks for develope my website.
+       * I use firebase authentication system for login or sign-up
+       * It is a full-Stack website connected with mongodb as database.
+       * Some page is protected by private route in my website.
+       * I use optimized and compressed image in my website.
+       * There are two types of access in my website.one is normal users access and another is admin type user access.
+       * A list of technologies and library which are used in my website.
+          * 1.React.js
+          * 2.Tailwindcss
+          * 3.daysiUI
+          * 4.Animate.css
+          * 5.React-hook-form          
+          * 6.React-fontawesome          
+          * 7.React-Firebase-hooks          
+          * 8.React-Toastify          
+          * 9.react-query          
 
 ## Available Scripts
 
