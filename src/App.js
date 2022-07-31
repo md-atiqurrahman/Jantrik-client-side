@@ -20,6 +20,7 @@ import AddProduct from './Pages/DashBoard/AddProduct';
 import ManageProducts from './Pages/DashBoard/ManageProducts';
 import RequireAdmin from './Pages/Shared/RequireAdmin/RequireAdmin';
 import useScrollToTop from './hooks/useScrollToTop';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   useScrollToTop();
@@ -30,6 +31,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/allReviews' element={<AllReviews></AllReviews>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <PurchaseTool></PurchaseTool>
