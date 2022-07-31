@@ -4,8 +4,8 @@ import auth from '../../../../firebase.init';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const OrderModal = ({ order, setOrder ,admin }) => {
-    const { _id, name, price,minimum, quantity } = order;
+const OrderModal = ({ order, setOrder, admin }) => {
+    const { _id, name, price, minimum, quantity } = order;
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
@@ -29,13 +29,14 @@ const OrderModal = ({ order, setOrder ,admin }) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(bookingOrder)
         })
             .then(res => res.json())
             .then(data => {
-                if(data.acknowledged === true){
-                    toast.success(`Your order of ${name} ${quantity ? quantity: minimum} pieces confirmed successfully`)
+                if (data.acknowledged === true) {
+                    toast.success(`Your order of ${name} ${quantity ? quantity : minimum} pieces confirmed successfully`)
                     setOrder(null);
                     navigate('/dashboard')
                 }

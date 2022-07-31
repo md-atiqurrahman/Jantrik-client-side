@@ -11,7 +11,12 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: profile } = useQuery(['profile', user], () => fetch(`https://vast-cove-21670.herokuapp.com/userProfile?email=${user?.email}`)
+    const { data: profile } = useQuery(['profile', user], () => fetch(`https://vast-cove-21670.herokuapp.com/userProfile?email=${user?.email}`, {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
         .then(res => res.json()))
 
     useEffect(() => {
@@ -26,7 +31,8 @@ const MyProfile = () => {
             fetch('https://vast-cove-21670.herokuapp.com/userProfile', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(rest)
             })
@@ -45,7 +51,8 @@ const MyProfile = () => {
             fetch(`https://vast-cove-21670.herokuapp.com/userProfile/${data.email}`, {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(rest)
             })

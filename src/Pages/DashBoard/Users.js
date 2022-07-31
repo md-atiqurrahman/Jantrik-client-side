@@ -9,7 +9,10 @@ const Users = () => {
     const [user] = useAuthState(auth);
 
     const { data: users, isLoading ,refetch } = useQuery(['users',user], () => fetch('https://vast-cove-21670.herokuapp.com/users', {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
     }).then(res => res.json()))
 
     if (isLoading) {

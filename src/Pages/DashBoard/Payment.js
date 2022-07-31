@@ -15,7 +15,10 @@ const Payment = () => {
     const url = `https://vast-cove-21670.herokuapp.com/order/${orderId}`;
 
     const { data: order, isLoading } = useQuery(['order', orderId], () => fetch(url, {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
     }).then(res => res.json()))
 
     if (isLoading) {

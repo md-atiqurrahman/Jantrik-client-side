@@ -38,7 +38,8 @@ const AddProduct = () => {
                 fetch('https://vast-cove-21670.herokuapp.com/addProduct', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
                     },
                     body: JSON.stringify(newProduct)
 

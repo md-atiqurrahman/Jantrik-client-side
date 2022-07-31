@@ -37,10 +37,10 @@ const Login = () => {
 
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [from,gUser,user,navigate]);
+    }, [token, from, navigate]);
 
     if (loading || gLoading || sending) {
         return <Loading></Loading>

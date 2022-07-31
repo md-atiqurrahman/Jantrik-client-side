@@ -6,9 +6,17 @@ const UserRow = ({ user, index, refetch }) => {
 
     const makeAdmin = () => {
         fetch(`https://vast-cove-21670.herokuapp.com/users/admin/${email}`, {
-            method: 'PUT'
+            method: 'PUT',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
         })
-            .then(res => res.json())
+            .then(res => {
+                if(res.status === 403){
+                    toast.error('Failed to make an admin')
+                }
+                return res.json();
+            })
             .then(data => {
                 if (data.modifiedCount > 0) {
                     refetch();

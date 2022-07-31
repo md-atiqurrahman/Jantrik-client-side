@@ -17,7 +17,12 @@ const PurchaseTool = () => {
 
     useEffect(() => {
           const url = `https://vast-cove-21670.herokuapp.com/tools/${id}`;
-          fetch(url)
+          fetch(url,{
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+          })
           .then(res => res.json())
           .then(data => {
              setTool(data)

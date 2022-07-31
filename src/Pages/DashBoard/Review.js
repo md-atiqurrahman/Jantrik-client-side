@@ -15,46 +15,47 @@ const Review = () => {
         const formData = new FormData();
         formData.append('image', image);
         const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
-        fetch(url,{
+        fetch(url, {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
-        .then(result => {
-            if(result.success === true){
-                const img = result.data.url;
-                const review = {
-                    name: user?.displayName,
-                    email: user?.email,
-                    comment: data.comment,
-                    rating: data.rating,
-                    img: img,
-                    city: data.city
-                };
+            .then(res => res.json())
+            .then(result => {
+                if (result.success === true) {
+                    const img = result.data.url;
+                    const review = {
+                        name: user?.displayName,
+                        email: user?.email,
+                        comment: data.comment,
+                        rating: data.rating,
+                        img: img,
+                        city: data.city
+                    };
 
-                // send review to database via server
+                    // send review to database via server
 
-                fetch('https://vast-cove-21670.herokuapp.com/review', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(review)
+                    fetch('https://vast-cove-21670.herokuapp.com/review', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                        },
+                        body: JSON.stringify(review)
 
-                })
-                .then(res => res.json())
-                .then(inserted => {
-                    if(inserted.insertedId){
-                        toast.success('Your review added successfully');
-                        reset();
-                    }
-                    else{
-                        toast.error('Failed to added a review')
-                    }
-                })
+                    })
+                        .then(res => res.json())
+                        .then(inserted => {
+                            if (inserted.insertedId) {
+                                toast.success('Your review added successfully');
+                                reset();
+                            }
+                            else {
+                                toast.error('Failed to added a review')
+                            }
+                        })
 
-            }
-        })
+                }
+            })
     };
 
 
@@ -72,12 +73,12 @@ const Review = () => {
                             placeholder='write here...'
                             className="textarea textarea-bordered h-24 w-full max-w-xs"
                             {...register('comment',
-                             {
-                                required: {
-                                    value: true,
-                                    message: 'Comment is required'
-                                }
-                            })}
+                                {
+                                    required: {
+                                        value: true,
+                                        message: 'Comment is required'
+                                    }
+                                })}
                         />
                         <label className="label">
                             {errors.comment?.type === 'required' && <span className="label-text-alt text-red-500">{errors.comment.message}</span>}

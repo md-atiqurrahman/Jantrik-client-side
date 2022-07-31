@@ -18,7 +18,8 @@ const CheckoutForm = ({order}) => {
         fetch('https://vast-cove-21670.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify({ totalPrice })
         })
@@ -89,6 +90,7 @@ const CheckoutForm = ({order}) => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 },
                 body: JSON.stringify(payment)
             })

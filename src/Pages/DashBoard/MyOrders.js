@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import CancelModal from './CancelModal';
+import useAdmin from '../../hooks/useAdmin';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     const [confirm, setConfirm] = useState(null);
+    const navigate = useNavigate();
 
-    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`https://vast-cove-21670.herokuapp.com/orders?email=${user?.email}`)
+    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`https://vast-cove-21670.herokuapp.com/orders?email=${user?.email}`, {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
         .then(res => res.json()))
 
 
@@ -23,7 +31,8 @@ const MyOrders = () => {
         fetch(url, {
             method: 'DELETE',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
             .then(res => res.json())
@@ -34,7 +43,12 @@ const MyOrders = () => {
             })
     }
 
-    return (
+    return admin ?
+    (
+        navigate('/dashboard/profile')
+    )
+    :
+    (
         <section>
             <div className="overflow-x-auto">
                 <table className="table w-full">

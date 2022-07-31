@@ -28,16 +28,16 @@ const SignUp = () => {
         verificationError
     ] = useSendEmailVerification(auth);
 
-    const [token] = useToken(user || gUser)
+    const [token] = useToken(user || gUser);
 
     const navigate = useNavigate();
     
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate('/home')
         }
-    }, [user, gUser, navigate])
+    }, [token, navigate])
 
 
     if (loading || gLoading || updating || sending) {
