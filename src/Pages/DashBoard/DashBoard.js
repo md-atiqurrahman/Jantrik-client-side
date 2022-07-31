@@ -2,10 +2,12 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useAdmin from '../../hooks/useAdmin';
 import CustomLink from '../Shared/CustomLink/CustomLink';
 
 const DashBoard = () => {
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     return (
         <div className="drawer drawer-mobile">
             <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
@@ -17,9 +19,23 @@ const DashBoard = () => {
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto max-w-sm bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><CustomLink as={Link} to='/dashboard' >My Orders</CustomLink></li>
-                    <li><CustomLink as={Link} to='/dashboard/review'>Add A Review</CustomLink></li>
+                    {
+                        !admin &&
+                        <>
+                            <li><CustomLink as={Link} to='/dashboard' >My Orders</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/review'>Add A Review</CustomLink></li>
+                        </>
+                    }
                     <li><CustomLink as={Link} to='/dashboard/profile'>My Profile</CustomLink></li>
+                    {
+                        admin &&
+                        <>
+                            <li><CustomLink as={Link} to='/dashboard/users'>All Users</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/manageAllOrders'>Manage All Orders</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/addProduct'>Add A Product</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/manageProducts'>Manage Products</CustomLink></li>
+                        </>
+                    }
                 </ul>
 
             </div>
