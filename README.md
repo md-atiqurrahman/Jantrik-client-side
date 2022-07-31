@@ -6,7 +6,7 @@ items of carpentry tools in this website.
 My website [Live link](https://jantrik-45dcd.web.app/)
 .
 
-  * Description of different features and functionality of Jantrik
+  * Description of different features and functionality of Jantrik client side
 
        * I use custom hooks for develope my website.
        * I use firebase authentication system for login or sign-up
@@ -14,7 +14,7 @@ My website [Live link](https://jantrik-45dcd.web.app/)
        * Some page is protected by private route in my website.
        * I use optimized and compressed image in my website.
        * There are two types of access in my website.one is normal users access and another is admin type user access.
-       * A list of technologies and library which are used in my website.
+       * A list of technologies and library which are used in my client side.
           * 1.React.js
           * 2.Tailwindcss
           * 3.daysiUI
