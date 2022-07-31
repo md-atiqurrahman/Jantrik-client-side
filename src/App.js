@@ -21,6 +21,8 @@ import ManageProducts from './Pages/DashBoard/ManageProducts';
 import RequireAdmin from './Pages/Shared/RequireAdmin/RequireAdmin';
 import useScrollToTop from './hooks/useScrollToTop';
 import Blogs from './Pages/Blogs/Blogs';
+import NotFound from './Pages/Shared/NotFound/NotFound';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   useScrollToTop();
@@ -32,6 +34,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/allReviews' element={<AllReviews></AllReviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <PurchaseTool></PurchaseTool>
@@ -50,6 +53,7 @@ function App() {
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageProducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
     </div>
