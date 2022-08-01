@@ -24,7 +24,7 @@ const MyPortfolio = () => {
                 </div>
             </div>
             <div className='mx-[90px]'>
-                <h1 className="text-xl text-[#363f4d] font-bold">Skills</h1>
+                <h1 className="text-xl text-[#363f4d] font-bold">My Skills</h1>
                 <ul className="steps mt-[30px] w-full">
                     <li className="step step-success">Html</li>
                     <li className="step step-success">Css</li>

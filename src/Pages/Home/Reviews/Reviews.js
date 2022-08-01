@@ -56,7 +56,7 @@ const Reviews = () => {
                 }
             </div>
             <div className='text-center mt-[24px]'>
-                <Link to='/allReviews'><button className='btn btn-primary'>Show More</button></Link>
+                <Link to='/allReviews'><button className='banner-btn text-white font-normal px-[18px] py-[7px] rounded-[5px]'>Show More</button></Link>
             </div>
         </div>
     );

@@ -65,7 +65,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((o, index) => <tr key={index} className='hover'>
+                            orders?.map((o, index) => <tr key={o._id} className='hover'>
                                 <th>{index + 1}</th>
                                 <td>{o.toolName}</td>
                                 <td>${o.price}</td>

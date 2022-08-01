@@ -14,7 +14,7 @@ const Banner = () => {
                             <h2>Hands Tools</h2>
                             <h2>Circular Saw &    Power Saw</h2>
                         </div>
-                        <button className='banner-btn text-white font-normal px-[18px] py-[7px] mt-[31px] rounded animate__animated animate__bounceInUp'>Shop Now</button>
+                        <button className='banner-btn text-white font-normal px-[18px] py-[7px] mt-[31px] rounded-[5px] animate__animated animate__bounceInUp'>Shop Now</button>
                     </div>
                 </div>
             </div>

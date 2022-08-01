@@ -17,7 +17,7 @@ const Footer = () => {
                     <p className='text-[16px] leading-[26px] mb-[25px]'>Get e-mail updates about our latest Deal and special offers.</p>
                     <div className="relative">
                         <input type="text" placeholder="Enter your email address" className="input rounded-full input-bordered w-full pr-16" />
-                        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none rounded-r-full text-[12px] hover:bg-[#363f4d] hover:text-white">Subscribe</button>
+                        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none rounded-r-full text-[12px] hover:bg-[#333] hover:text-white">Subscribe</button>
                     </div>
                 </div>
             </div>
