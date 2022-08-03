@@ -45,11 +45,11 @@ const PurchaseTool = () => {
 
     return (
         <section>
-            <div className='flex  justify-center mx-auto mt-[100px] mb-[60px]'>
-                <div className=' w-[25%] mr-[30px] border'>
+            <div className='flex flex-col lg:flex-row justify-center mx-auto mt-[60px] lg:mt-[100px] mb-[30px] lg:mb-[60px]'>
+                <div className='w-full lg:w-[25%] mr-[30px] border'>
                     <img className='w-full' src={image} alt="" />
                 </div>
-                <div className='w-[25%]'>
+                <div className='w-[90%] mx-auto lg:mx-0 lg:w-[25%] text-center lg:text-start mt-[15px] lg:mt-0'>
                     <p className='title text-[18px] font-medium  mb-[5px]'>{name}</p>
                     <div className="rating">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#f9ba48] h-[14px] w-[14px] " />
@@ -60,7 +60,7 @@ const PurchaseTool = () => {
                     </div>
                     <p className='text-[14px]  font-medium my-[5px]'>Price: ${price}</p>
                     <p className='text-[15px] leading-[26px] uppercase  font-medium'>In Stock <span className='ml-[10px]'>{available}</span></p>
-                    <div className='flex  items-center mt-[10px] mb-[15px]'>
+                    <div className='flex  items-center justify-center lg:justify-start mt-[10px] mb-[15px]'>
                         <div>
                             <input className='border p-[7px] w-[75px] h-[31px] mr-[15px] focus:outline-none' type="number" name="" id="order-input" defaultValue={minimum} onChange={handleQuantity} />
                         </div>
