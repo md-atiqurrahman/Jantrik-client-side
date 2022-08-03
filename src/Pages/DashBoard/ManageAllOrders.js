@@ -70,8 +70,8 @@ const ManageAllOrders = () => {
                             <td data-label={'Ordered Tool Name'}>{o.toolName}</td>
                             <td data-label={'Paid Status'}>{o?.paid ? <span className='text-success'>Paid</span> : <span className='text-red-500'>Unpaid</span>}</td>
                             <td data-label={'Cancel Order'}>{!o?.paid && <label htmlFor="cancel-modal" onClick={() => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label>}</td>
-                            <td data-label={'Delivery Status'}>{(o?.paid && !o?.deliveryStatus) && <div className='flex'>
-                                <button className='flex  btn-xs rounded-lg  text-[#363f4d] bg-success mr-[5px]'>
+                            <td data-label={'Delivery Status'}>{(o?.paid && !o?.deliveryStatus) && <div className='flex justify-end'>
+                                <button className='flex btn-xs rounded-lg  text-[#363f4d] bg-success mr-[5px]'>
                                     <div className='w-3 h-3 mr-2 border-b-2 border-[#363f4d] animate-spin rounded-full'></div>
                                     <span className='font-medium'>Pending...</span>
                                 </button>
