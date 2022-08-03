@@ -20,3 +20,10 @@
 .footer-details p:hover{
     color: #f1ac06;
 }
+
+@media only screen and (max-width:640px) {
+    .f-title{
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+}

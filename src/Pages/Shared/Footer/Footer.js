@@ -12,16 +12,16 @@ const Footer = () => {
     return (
         <footer className='bg-[#f9f9fb] pt-[50px]'>
             <div className='text-center w-full'>
-                <div className="form-control  text-center w-[35%] mx-auto mb-[20px]">
-                    <h1 className='text-[30px] font-normal mb-[3px]'>Sign Up For Newsletters</h1>
-                    <p className='text-[16px] leading-[26px] mb-[25px]'>Get e-mail updates about our latest Deal and special offers.</p>
+                <div className="form-control  text-center w-[80%] lg:w-[35%] mx-auto mb-[20px]">
+                    <h1 className='text-[24px] lg:text-[30px] font-normal mb-[3px]'>Sign Up For Newsletters</h1>
+                    <p className='text-[14px] lg:text-[16px] leading-[26px] mb-[15px] lg:mb-[25px]'>Get e-mail updates about our latest Deal and special offers.</p>
                     <div className="relative">
                         <input type="text" placeholder="Enter your email address" className="input rounded-full input-bordered w-full pr-16" />
                         <button className="btn btn-primary absolute top-0 right-0 rounded-l-none rounded-r-full text-[12px] hover:bg-[#333] hover:text-white">Subscribe</button>
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between py-10 px-[90px] bg-[#f9f9fb] text-base-content">
+            <div className="flex flex-col lg:flex-row justify-between py-4 lg:py-10 px-[90px] bg-[#f9f9fb] text-base-content">
                 <div className='contact'>
                     <h1 className="f-title">Contact Us</h1>
                     <p>

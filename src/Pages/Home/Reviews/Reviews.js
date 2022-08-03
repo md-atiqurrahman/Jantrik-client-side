@@ -18,8 +18,8 @@ const Reviews = () => {
 
 
     return (
-        <div className='mx-[90px] mb-[60px]'>
-            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px]'>
+        <div className='lg:mx-[90px] mb-[60px]'>
+            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px] section-title'>
                 <div>
                     <h1 className='title text-[18px] '>What Our Clients Says...</h1>
                 </div>
@@ -32,10 +32,10 @@ const Reviews = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-x-6 gap-y-6'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6'>
                 {
-                    reviews.map(review => <div key={review?._id} className="card max-w-sm bg-base-100 shadow-xl">
-                        <div className="card-body">
+                    reviews.map(review => <div key={review?._id} className="card max-w-[90%] mx-auto lg:max-w-sm bg-base-100 shadow-xl">
+                        <div className="card-body text-justify">
                             <p className='text-[#555555]'>
                                 {review?.comment.length <= 112 ? review?.comment : review?.comment?.slice(0, 112) + '...'}
                             </p>

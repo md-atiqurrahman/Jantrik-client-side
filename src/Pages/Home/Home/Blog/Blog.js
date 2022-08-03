@@ -8,8 +8,8 @@ import './Blog.css';
 
 const Blog = () => {
     return (
-        <div className='mr-[90px] ml-[90px] mb-[60px]'>
-            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px]'>
+        <div className='lg:mx-[90px] mb-[60px]'>
+            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px] section-title'>
                 <div>
                     <h1 className='title text-[18px] '>From The Blog</h1>
                 </div>
@@ -22,8 +22,8 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between'>
-                <div className="w-[370px] bg-base-100">
+            <div className='flex flex-col lg:flex-row '>
+                <div className="w-[80%] mx-auto lg:w-[370px] bg-base-100 mb-[20px] lg:mb-0">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img1} className="w-full mb-[18px]" alt="drill machine" />
@@ -50,7 +50,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[370px] bg-base-100">
+                <div className="w-[80%] mx-auto lg:w-[370px] bg-base-100 mb-[20px] lg:mb-0">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img2} className="w-full mb-[18px]" alt="drill machine" />
@@ -77,7 +77,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[370px] bg-base-100">
+                <div className="w-[80%] mx-auto lg:w-[370px] bg-base-100">
                     <div className='blog-img'>
                         <a href="#">
                             <img src={img3} className="w-full mb-[18px]" alt="drill machine" />
