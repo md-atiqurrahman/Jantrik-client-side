@@ -23,3 +23,15 @@
 .img-container:hover .overlay{
     transform: scale(1);
 }
+
+@media only screen and (max-width:640px){
+    .img-container img{
+        display: block;
+        width: 90%;
+        height: 87%;
+        margin: 30px auto 0;
+    }
+    .new-arrivals{
+        margin-bottom: 30px;
+    }
+}

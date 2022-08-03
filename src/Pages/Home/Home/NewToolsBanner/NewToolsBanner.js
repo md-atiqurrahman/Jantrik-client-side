@@ -4,8 +4,8 @@ import img2 from '../../../../images/NewTools/2.jpg';
 
 const NewToolsBanner = () => {
     return (
-        <div className='flex justify-center mb-[60px] mx-[10px]'>
-            <div className='mr-[30px] img-container'>
+        <div className='grid sm:grid-cols-1 lg:grid-cols-2  lg:gap-x-[20px] lg:mb-[60px] lg:mx-[90px] new-arrivals'>
+            <div className='img-container'>
                 <img src={img1} alt="" />
                 <div className="overlay">
                 </div>

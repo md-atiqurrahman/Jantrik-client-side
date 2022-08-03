@@ -14,8 +14,8 @@ const Tools = () => {
     },[])
 
     return (
-        <div className='ml-[90px] mr-[90px] mb-[30px] relative'>
-            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px]'>
+        <div className='lg:mx-[90px] mb-[30px] relative'>
+            <div className='flex justify-between border border-[#dddddd] py-[10px] pl-[25px] pr-[10px] mb-[30px] section-title'>
                 <div>
                     <h1 className=' text-[18px] '>Tools</h1>
                 </div>
@@ -28,7 +28,7 @@ const Tools = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-3 justify-items-center gap-y-[10px]'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-3 justify-items-center gap-y-[10px]'>
                 {
                     tools.map( tool => <Tool
                     key={tool._id}

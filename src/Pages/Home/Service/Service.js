@@ -6,14 +6,14 @@ import img4 from '../../../images/Service/discount.png';
 
 const Service = () => {
     return (
-        <div>
-            <div className='mx-[90px] mb-[60px]'>
+        <div className='mb-[60px]'>
+            <div className='section-title lg:mx-[90px] lg:mb-[60px]'>
                 <div className='border border-[#dddddd] py-[10px] text-center '>
                     <h1 className='title text-[18px] '>Service We Provide</h1>
                 </div>
             </div>
-            <div className='flex justify-evenly mb-[60px]'>
-                <div className='flex justify-center items-center '>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-4 gap-y-[30px] lg:gap-x-[20px] lg:mb-[60px] lg:mx-[90px] justify-center'>
+                <div className='flex lg:justify-center items-center '>
                     <div>
                         <img src={img1} alt="" />
                     </div>
@@ -22,7 +22,7 @@ const Service = () => {
                         <p className='title font-normal text-[13px]'>Free shipping on all order</p>
                     </div>
                 </div>
-                <div className='flex justify-center items-center '>
+                <div className='flex lg:justify-center items-center '>
                     <div>
                         <img src={img2} alt="" />
                     </div>
@@ -31,7 +31,7 @@ const Service = () => {
                         <p className='title font-normal text-[13px]'>Support online 24 hours</p>
                     </div>
                 </div>
-                <div className='flex justify-center items-center '>
+                <div className='flex lg:justify-center items-center '>
                     <div>
                         <img src={img3} alt="" />
                     </div>
@@ -40,7 +40,7 @@ const Service = () => {
                         <p className='title font-normal text-[13px]'>Back guarantee under 7 days</p>
                     </div>
                 </div>
-                <div className='flex justify-center items-center '>
+                <div className='flex lg:justify-center items-center '>
                     <div>
                         <img src={img4} alt="" />
                     </div>

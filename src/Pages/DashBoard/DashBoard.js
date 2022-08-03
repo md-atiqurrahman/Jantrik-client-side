@@ -17,10 +17,10 @@ const DashBoard = () => {
             </div>
             <div className="drawer-side sticky">
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto max-w-sm bg-base-100 text-base-content">
+                <ul className="menu p-4 overflow-y-auto w-48  bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
                     {
-                        !admin &&
+                       !admin && 
                         <>
                             <li><CustomLink as={Link} to='/dashboard' >My Orders</CustomLink></li>
                             <li><CustomLink as={Link} to='/dashboard/review'>Add A Review</CustomLink></li>
@@ -31,9 +31,9 @@ const DashBoard = () => {
                         admin &&
                         <>
                             <li><CustomLink as={Link} to='/dashboard/users'>All Users</CustomLink></li>
-                            <li><CustomLink as={Link} to='/dashboard/manageAllOrders'>Manage All Orders</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/manageAllOrders'>Manage Orders</CustomLink></li>
                             <li><CustomLink as={Link} to='/dashboard/addProduct'>Add A Product</CustomLink></li>
-                            <li><CustomLink as={Link} to='/dashboard/manageProducts'>Manage Products</CustomLink></li>
+                            <li><CustomLink as={Link} to='/dashboard/manageProducts'>Manage Tools</CustomLink></li>
                         </>
                     }
                 </ul>
