@@ -2,14 +2,13 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div>
-            <div className="bg-[#3abff8] rounded-lg shadow-lg w-[50%] px-[50px]
-               py-[10px]  mx-auto    mt-[20px] text-center">
+        <div className='lg:mx-[90px]'>
+            <div className="border-2 py-[10px] px-[5px] mt-[20px] text-center section-title">
                 <div>
-                    <span className='text-2xl'>Everything about React Application and JavaScript.</span>
+                    <span className='text-xl lg:text-2xl'>Everything about React Application and JavaScript</span>
                 </div>
             </div>
-            <div className='mx-[90px] mt-[30px]'>
+            <div className='section-title mt-[30px] text-justify'>
                 <div className='mb-[30px]'>
                     <h1 className='text-xl'>1.How will you improve the performance of a React Application?</h1>
                     <p className='text-[18px] mt-[10px]'>Ans: There are many ways to improve the performance of a React application.Among them some of these are:</p>
