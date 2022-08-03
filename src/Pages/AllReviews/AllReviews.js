@@ -10,11 +10,11 @@ const AllReviews = () => {
     }, [])
 
     return (
-        <div className='my-[60px]'>
-            <div className='grid grid-cols-3 justify-items-center gap-x-6 gap-y-6'>
+        <div className='my-[20px] lg:my-[60px]'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-x-6 gap-y-6'>
                 {
-                    reviews.map(review => <div key={review?._id} className="card max-w-sm bg-base-100 shadow-xl">
-                        <div className="card-body">
+                    reviews.map(review => <div key={review?._id} className="card max-w-[90%] mx-auto lg:max-w-sm bg-base-100 shadow-xl">
+                        <div className="card-body text-justify">
                             <p className='text-[#555555]'>
                                 {review?.comment.length <= 112 ? review?.comment : review?.comment?.slice(0, 112) + '...'}
                             </p>
