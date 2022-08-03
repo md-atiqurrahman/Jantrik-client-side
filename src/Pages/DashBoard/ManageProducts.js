@@ -36,8 +36,7 @@ const ManageProducts = () => {
 
     return (
         <section>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+            <table className="my-table">
                     <thead>
                         <tr>
                             <th>SL no.</th>
@@ -48,14 +47,13 @@ const ManageProducts = () => {
                     <tbody>
                         {
                             tools?.map((t, index) => <tr key={t._id} className='hover'>
-                                <th>{index + 1}</th>
-                                <td>{t.name}</td>
-                                <td><label htmlFor="cancel-modal" onClick={() => setConfirm(t)} className='btn btn-xs btn-ghost'>Delete</label></td>
+                                <td data-label={'SL no.'}>{index + 1}</td>
+                                <td data-label={'Tool Name'}>{t.name}</td>
+                                <td data-label={'Delete Product'}><label htmlFor="cancel-modal" onClick={() => setConfirm(t)} className='btn btn-xs btn-ghost'>Delete</label></td>
                             </tr>)
                         }
                     </tbody>
                 </table>
-            </div>
             {
                 confirm && <DeleteToolsModal confirm={confirm} handleDeleteTools={handleDeleteTools}></DeleteToolsModal>
             }

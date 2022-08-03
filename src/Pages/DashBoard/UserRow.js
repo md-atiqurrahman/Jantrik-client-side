@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 const UserRow = ({ user, index, refetch }) => {
     const { email, role } = user;
 
+    
+
     const makeAdmin = () => {
         fetch(`https://vast-cove-21670.herokuapp.com/users/admin/${email}`, {
             method: 'PUT',
@@ -25,10 +27,10 @@ const UserRow = ({ user, index, refetch }) => {
             })
     }
     return (
-        <tr>
-            <th>{index + 1}</th>
-            <td>{email}</td>
-            <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make admin</button>}</td>
+        <tr className='overflow-hidden'>
+            <td data-label={'SL no.'}>{index + 1}</td>
+            <td data-label={'Email'}>{email}</td>
+            <td data-label={'Make admin'}>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make admin</button>}</td>
         </tr>
     );
 };
