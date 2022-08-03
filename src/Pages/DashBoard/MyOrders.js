@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import CancelModal from './CancelModal';
 import useAdmin from '../../hooks/useAdmin';
+import './MyOrders.css';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
@@ -44,14 +45,13 @@ const MyOrders = () => {
     }
 
     return admin ?
-    (
-        navigate('/dashboard/profile')
-    )
-    :
-    (
-        <section>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+        (
+            navigate('/dashboard/profile')
+        )
+        :
+        (
+            <section>
+                <table className="my-table">
                     <thead>
                         <tr>
                             <th>SL no.</th>
@@ -66,31 +66,30 @@ const MyOrders = () => {
                     <tbody>
                         {
                             orders?.map((o, index) => <tr key={o._id} className='hover'>
-                                <th>{index + 1}</th>
-                                <td>{o.toolName}</td>
-                                <td>${o.price}</td>
-                                <td>{o?.quantity}</td>
-                                <td>
+                                <td data-label={'SL no.'}>{index + 1}</td>
+                                <td data-label={'Tool Name'}>{o.toolName}</td>
+                                <td data-label={'Price Per Unit'}>${o.price}</td>
+                                <td data-label={'Quantity'}>{o?.quantity}</td>
+                                <td data-label={'Payment'}>
                                     {(o.totalPrice && !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}
                                     {(o.totalPrice && o.paid) && <span className='text-success uppercase'>Paid</span>}
                                 </td>
-                                <td>
+                                <td data-label={'TransactionId'}>
                                     {
                                         (o?.totalPrice && o.paid) && <span
                                             className='text-[#330000]'>{o.transactionId}</span>
                                     }
                                 </td>
-                                <td>{(o.totalPrice && !o.paid) && <label htmlFor="cancel-modal" onClick={() => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label>}</td>
+                                <td data-label={'Cancel Order'}>{(o.totalPrice && !o.paid) && <label htmlFor="cancel-modal" onClick={() => setConfirm(o)} className='btn btn-xs btn-ghost'>Cancel</label>}</td>
                             </tr>)
                         }
                     </tbody>
                 </table>
-            </div>
-            {
-                confirm && <CancelModal confirm={confirm} handleCancel={handleCancel}></CancelModal>
-            }
-        </section>
-    );
+                {
+                    confirm && <CancelModal confirm={confirm} handleCancel={handleCancel}></CancelModal>
+                }
+            </section>
+        );
 };
 
 export default MyOrders;
