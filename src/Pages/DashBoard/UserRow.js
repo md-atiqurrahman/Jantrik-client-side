@@ -30,7 +30,7 @@ const UserRow = ({ user, index, refetch }) => {
         <tr className='overflow-hidden'>
             <td data-label={'SL no.'}>{index + 1}</td>
             <td data-label={'Email'}>{email}</td>
-            <td data-label={'Make admin'}>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make admin</button>}</td>
+            <td data-label={'Make admin'}>{role !== 'admin' ? <button onClick={makeAdmin} className="btn btn-xs">Make admin</button> : <span className='text-success'>Admin</span>}</td>
         </tr>
     );
 };

@@ -32,7 +32,7 @@ const MyPortfolio = () => {
             </div>
             <div className='lg:mx-[90px] section-title mt-[30px]'>
                 <h1 className="text-xl text-[#363f4d] font-bold">My Skills</h1>
-                <ul className="steps mt-[10px] lg:mt-[30px] w-full steps-vertical lg:steps-horizontal">
+                <ul className="steps mt-[10px] lg:mt-[30px] w-full steps-vertical lg:steps-horizontal sticky">
                     <li className="step step-success">Html</li>
                     <li className="step step-success">Css</li>
                     <li className="step step-success">Tailwindcss</li>
