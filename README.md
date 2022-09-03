@@ -3,11 +3,14 @@
 It is a carpentry tools manufacturer website.You can wholesale and manage different
 items of carpentry tools in this website.
 
-My website [Live link](https://jantrik-45dcd.web.app/)
+# Live site link
+Live site [click here](https://jantrik-45dcd.web.app/)
 
 # Admin Credentials
 Email : mdatiqurrahman9104@gmail.com
 Password : 123456
+
+# Project Description
 
   * Description of different features and functionality of Jantrik client side
 
