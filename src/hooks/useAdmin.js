@@ -7,7 +7,7 @@ const useAdmin = user =>{
 
     useEffect(() =>{
         const email = user?.email;
-        fetch(`https://vast-cove-21670.herokuapp.com/admin/${email}`,{
+        fetch(`https://jantrik-client-side.vercel.app/admin/${email}`,{
             method: 'GET'
         })
         .then(res => res.json())

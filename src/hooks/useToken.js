@@ -8,7 +8,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            fetch(`https://vast-cove-21670.herokuapp.com/storeUsers/${email}`, {
+            fetch(`https://jantrik-client-side.vercel.app/storeUsers/${email}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

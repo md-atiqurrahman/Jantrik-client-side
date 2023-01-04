@@ -25,7 +25,7 @@ const OrderModal = ({ order, setOrder, admin }) => {
             address: event.target.address.value
         }
 
-        fetch('https://vast-cove-21670.herokuapp.com/bookingOrder', {
+        fetch('https://jantrik-client-side.vercel.app/bookingOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

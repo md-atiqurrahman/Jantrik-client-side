@@ -8,7 +8,7 @@ const Tools = () => {
     const [tools , setTools] = useState([]);
 
     useEffect(() =>{
-        fetch('https://vast-cove-21670.herokuapp.com/tools')
+        fetch('https://jantrik-client-side.vercel.app/tools')
         .then(res => res.json())
         .then(data => setTools(data))
     },[])

@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [user] = useAuthState(auth);
     const [confirm, setConfirm] = useState(null);
 
-    const { data: tools, isLoading, refetch } = useQuery(['tools',user], () => fetch('https://vast-cove-21670.herokuapp.com/tools').then(res => res.json()))
+    const { data: tools, isLoading, refetch } = useQuery(['tools',user], () => fetch('https://jantrik-client-side.vercel.app/tools').then(res => res.json()))
 
     
     if(isLoading){
@@ -17,7 +17,7 @@ const ManageProducts = () => {
     }
 
     const handleDeleteTools = (id) => {
-        fetch(`https://vast-cove-21670.herokuapp.com/tool/${id}`, {
+        fetch(`https://jantrik-client-side.vercel.app/tool/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -11,7 +11,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: profile } = useQuery(['profile', user], () => fetch(`https://vast-cove-21670.herokuapp.com/userProfile?email=${user?.email}`, {
+    const { data: profile } = useQuery(['profile', user], () => fetch(`https://jantrik-client-side.vercel.app/userProfile?email=${user?.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const MyProfile = () => {
     const onSubmit = async (data) => {
         if (data?.save) {
             const { save, ...rest } = data;
-            fetch('https://vast-cove-21670.herokuapp.com/userProfile', {
+            fetch('https://jantrik-client-side.vercel.app/userProfile', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const MyProfile = () => {
 
         if (data?.update) {
             const { update, ...rest } = data;
-            fetch(`https://vast-cove-21670.herokuapp.com/userProfile/${data.email}`, {
+            fetch(`https://jantrik-client-side.vercel.app/userProfile/${data.email}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

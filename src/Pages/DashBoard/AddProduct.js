@@ -35,7 +35,7 @@ const AddProduct = () => {
 
                 
 
-                fetch('https://vast-cove-21670.herokuapp.com/addProduct', {
+                fetch('https://jantrik-client-side.vercel.app/addProduct', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
