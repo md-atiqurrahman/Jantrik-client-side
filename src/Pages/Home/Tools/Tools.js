@@ -8,7 +8,7 @@ const Tools = () => {
     const [tools , setTools] = useState([]);
 
     useEffect(() =>{
-        fetch('https://jantrik-server-side.vercel.app/tools')
+        fetch('https://jantrik-carpentary-tools-server-side.vercel.app/tools')
         .then(res => res.json())
         .then(data => setTools(data))
     },[])

@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [user] = useAuthState(auth);
     const [confirm, setConfirm] = useState(null);
 
-    const { data: tools, isLoading, refetch } = useQuery(['tools',user], () => fetch('https://jantrik-server-side.vercel.app/tools').then(res => res.json()))
+    const { data: tools, isLoading, refetch } = useQuery(['tools',user], () => fetch('https://jantrik-carpentary-tools-server-side.vercel.app/tools').then(res => res.json()))
 
     
     if(isLoading){
@@ -17,7 +17,7 @@ const ManageProducts = () => {
     }
 
     const handleDeleteTools = (id) => {
-        fetch(`https://jantrik-server-side.vercel.app/tool/${id}`, {
+        fetch(`https://jantrik-carpentary-tools-server-side.vercel.app/tool/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

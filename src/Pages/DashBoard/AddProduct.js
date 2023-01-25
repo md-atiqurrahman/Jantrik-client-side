@@ -35,7 +35,7 @@ const AddProduct = () => {
 
                 
 
-                fetch('https://jantrik-server-side.vercel.app/addProduct', {
+                fetch('https://jantrik-carpentary-tools-server-side.vercel.app/addProduct', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

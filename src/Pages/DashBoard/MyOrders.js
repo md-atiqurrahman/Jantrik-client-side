@@ -20,7 +20,7 @@ const MyOrders = () => {
         }
     }, [admin, navigate]);
 
-    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`https://jantrik-server-side.vercel.app/orders?email=${user?.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(['orders', user], () => fetch(`https://jantrik-carpentary-tools-server-side.vercel.app/orders?email=${user?.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,7 +34,7 @@ const MyOrders = () => {
     }
 
     const handleCancel = (id) => {
-        const url = `https://jantrik-server-side.vercel.app/orders/${id}`;
+        const url = `https://jantrik-carpentary-tools-server-side.vercel.app/orders/${id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {
