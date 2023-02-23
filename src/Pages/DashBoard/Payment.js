@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51LR6WTB23g70PyZDVpQZjJ84WKn19QaM1Nqrd
 const Payment = () => {
     const {orderId} = useParams();
 
-    const url = `https://jantrik-server-side.vercel.app/order/${orderId}`;
+    const url = `https://jantrik-server-side.up.railway.app/order/${orderId}`;
 
     const { data: order, isLoading } = useQuery(['order', orderId], () => fetch(url, {
         method: 'GET',

@@ -7,7 +7,7 @@ const useAdmin = user =>{
 
     useEffect(() =>{
         const email = user?.email;
-        fetch(`https://jantrik-server-side.vercel.app/admin/${email}`,{
+        fetch(`https://jantrik-server-side.up.railway.app/admin/${email}`,{
             method: 'GET'
         })
         .then(res => res.json())

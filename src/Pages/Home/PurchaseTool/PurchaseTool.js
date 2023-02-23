@@ -16,7 +16,7 @@ const PurchaseTool = () => {
     const { id } = useParams();
 
     useEffect(() => {
-          const url = `https://jantrik-server-side.vercel.app/tools/${id}`;
+          const url = `https://jantrik-server-side.up.railway.app/tools/${id}`;
           fetch(url,{
             method: 'GET',
             headers: {
