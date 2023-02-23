@@ -7,7 +7,7 @@ const UserRow = ({ user, index, refetch }) => {
     
 
     const makeAdmin = () => {
-        fetch(`https://jantrik-carpentary-tools-server-side.vercel.app/users/admin/${email}`, {
+        fetch(`https://jantrik-server-side.vercel.app/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

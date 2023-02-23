@@ -8,7 +8,7 @@ import UserRow from './UserRow';
 const Users = () => {
     const [user] = useAuthState(auth);
 
-    const { data: users, isLoading ,refetch } = useQuery(['users',user], () => fetch('https://jantrik-carpentary-tools-server-side.vercel.app/users', {
+    const { data: users, isLoading ,refetch } = useQuery(['users',user], () => fetch('https://jantrik-server-side.vercel.app/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

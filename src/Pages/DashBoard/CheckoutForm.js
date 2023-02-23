@@ -16,7 +16,7 @@ const CheckoutForm = ({order}) => {
     const { _id, totalPrice, userEmail, userName } = order;
 
     useEffect(() => {
-        fetch('https://jantrik-carpentary-tools-server-side.vercel.app/create-payment-intent', {
+        fetch('https://jantrik-server-side.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const CheckoutForm = ({order}) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`https://jantrik-carpentary-tools-server-side.vercel.app/orders/${_id}`, {
+            fetch(`https://jantrik-server-side.vercel.app/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

@@ -34,7 +34,7 @@ const Review = () => {
 
                     // send review to database via server
 
-                    fetch('https://jantrik-carpentary-tools-server-side.vercel.app/review', {
+                    fetch('https://jantrik-server-side.vercel.app/review', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
