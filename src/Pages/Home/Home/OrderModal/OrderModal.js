@@ -25,7 +25,7 @@ const OrderModal = ({ order, setOrder, admin }) => {
             address: event.target.address.value
         }
 
-        fetch('https://jantrik-server-side.up.railway.app/bookingOrder', {
+        fetch('https://jantrik-server-side.vercel.app/bookingOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

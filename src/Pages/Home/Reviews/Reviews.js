@@ -8,7 +8,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useState(() => {
-        fetch('https://jantrik-server-side.up.railway.app/review')
+        fetch('https://jantrik-server-side.vercel.app/review')
             .then(res => res.json())
             .then(data => {
                 const recentReviews = data.slice(-6);
