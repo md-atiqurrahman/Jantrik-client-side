@@ -8,7 +8,7 @@ import CancelOrderRequestModal from './CancelOrderRequestModal';
 const ManageAllOrders = () => {
     const [user] = useAuthState(auth);
     const [confirm, setConfirm] = useState(null);
-    const { data: allOrders, isLoading, refetch } = useQuery(['allOders', user], () => fetch('https://vast-cove-21670.herokuapp.com/allOrders', {
+    const { data: allOrders, isLoading, refetch } = useQuery(['allOders', user], () => fetch('https://jantrik-server-side.vercel.app/allOrders', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
     }
 
     const changeDeliveryStatus = (id) => {
-        fetch(`https://vast-cove-21670.herokuapp.com/allOrders/${id}`, {
+        fetch(`https://jantrik-server-side.vercel.app/allOrders/${id}`, {
             method: 'PATCH',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -35,7 +35,7 @@ const ManageAllOrders = () => {
     }
 
     const handleCancel = (id) => {
-        fetch(`https://vast-cove-21670.herokuapp.com/allOrders/${id}`, {
+        fetch(`https://jantrik-server-side.vercel.app/allOrders/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

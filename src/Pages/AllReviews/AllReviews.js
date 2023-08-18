@@ -4,7 +4,7 @@ const AllReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useState(() => {
-        fetch('https://vast-cove-21670.herokuapp.com/review')
+        fetch('https://jantrik-server-side.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

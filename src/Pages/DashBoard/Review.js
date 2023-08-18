@@ -34,7 +34,7 @@ const Review = () => {
 
                     // send review to database via server
 
-                    fetch('https://vast-cove-21670.herokuapp.com/review', {
+                    fetch('https://jantrik-server-side.vercel.app/review', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

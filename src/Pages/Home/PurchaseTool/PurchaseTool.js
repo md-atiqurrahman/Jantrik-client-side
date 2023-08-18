@@ -16,7 +16,7 @@ const PurchaseTool = () => {
     const { id } = useParams();
 
     useEffect(() => {
-          const url = `https://vast-cove-21670.herokuapp.com/tools/${id}`;
+          const url = `https://jantrik-server-side.vercel.app/tools/${id}`;
           fetch(url,{
             method: 'GET',
             headers: {
