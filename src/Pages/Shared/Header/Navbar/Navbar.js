@@ -19,7 +19,6 @@ const Navbar = () => {
         <li className='hover:text-primary'><CustomLink as={Link} to='/'>Home</CustomLink></li>
         <li className='hover:text-primary'><a>Shop</a></li>
         <li className='hover:text-primary'><CustomLink as={Link} to='/blogs'>Blogs</CustomLink></li>
-        <li className='hover:text-primary'><CustomLink as={Link} to='/myPortfolio'>My Portfolio</CustomLink></li>
         <li className='hover:text-primary'><CustomLink as={Link} to='/allReviews'>All Reviews</CustomLink></li>
         {
             user && <li className='hover:text-primary'><CustomLink as={Link} to='/dashboard'>Dashboard</CustomLink></li>
