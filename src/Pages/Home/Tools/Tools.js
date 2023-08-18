@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { faGreaterThan, faLessThan} from '@fortawesome/free-solid-svg-icons';
+import { faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Tools.css';
 import Tool from '../Home/Tool/Tool';
 
 const Tools = () => {
-    const [tools , setTools] = useState([]);
+    const [tools, setTools] = useState([]);
 
     useEffect(() =>{
         fetch('https://jantrik-server-side.vercel.app/tools')
@@ -21,18 +21,18 @@ const Tools = () => {
                 </div>
                 <div className='flex'>
                     <div className='mr-[8px] border rounded-[3px] h-[30px] w-[30px] text-center hover:bg-[#f1ac06] text-[#b6b4b4] hover:text-white'>
-                    <FontAwesomeIcon className='text-[12px]' icon={faLessThan} />
+                        <FontAwesomeIcon className='text-[12px]' icon={faLessThan} />
                     </div>
                     <div className='border rounded-[3px] h-[30px] w-[30px] text-center hover:bg-[#f1ac06] text-[#b6b4b4] hover:text-white'>
-                    <FontAwesomeIcon className='text-[12px] ' icon={faGreaterThan} />
+                        <FontAwesomeIcon className='text-[12px] ' icon={faGreaterThan} />
                     </div>
                 </div>
             </div>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 justify-items-center gap-y-[10px]'>
                 {
-                    tools.map( tool => <Tool
-                    key={tool._id}
-                    tool = {tool}
+                    tools.map(tool => <Tool
+                        key={tool._id}
+                        tool={tool}
                     ></Tool>)
                 }
             </div>
