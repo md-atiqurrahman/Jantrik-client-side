@@ -60,7 +60,7 @@ const Review = () => {
 
 
     return (
-        <div className='ml-[20px] mb-[60px] lg:mb-0'>
+        <div className='ml-[20px] mb-[60px]'>
             <div>
                 <h1 className="text-2xl text-primary">Add a Review</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
