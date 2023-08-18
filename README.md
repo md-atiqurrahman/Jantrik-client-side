@@ -4,7 +4,7 @@ Welcome to the Jantrik Carpentry Tools Manufacturer project! This website provid
 
 ## Live Site Link
 
-You can access the live site by [click here](https://jantrik*45dcd.web.app/)
+You can access the live site by [click here](https://jantrik-45dcd.web.app/)
 
 ## Admin Credentials
 
