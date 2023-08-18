@@ -1,32 +1,42 @@
-# Jantrik-Carpentry Tools Manufacturer
+# Jantrik * Carpentry Tools Manufacturer
 
-It is a carpentry tools manufacturer website.You can wholesale and manage different
-items of carpentry tools in this website.
+Welcome to the Jantrik Carpentry Tools Manufacturer project! This website provides a platform for wholesale and efficient management of various carpentry tools and items.
 
-# Live site link
-Live site [click here](https://jantrik-45dcd.web.app/)
+## Live Site Link
 
-# Admin Credentialsy
-Email : mdatiqurrahman9104@gmail.com
-Password : 123456
+You can access the live site by[click here](https://jantrik*45dcd.web.app/)
 
-# Project Description
+## Admin Credentials
 
-  * Description of different features and functionality of Jantrik client side
+For administrative access, you can use the following credentials:
 
-       * I use custom hooks for develope my website.
-       * I use firebase authentication system for login or sign-up
-       * It is a full-Stack website connected with mongodb as database.
-       * Some page is protected by private route in my website.
-       * I use optimized and compressed image in my website.
-       * There are two types of access in my website.one is normal users access and another is admin type user access.
-       * A list of technologies and library which are used in my client side.
-          * 1.React.js
-          * 2.Tailwindcss
-          * 3.daysiUI
-          * 4.Animate.css
-          * 5.React-hook-form          
-          * 6.React-fontawesome          
-          * 7.React-Firebase-hooks          
-          * 8.React-Toastify          
-          * 9.react-query          
+* Email: mdatiqurrahman9104@gmail.com
+* Password: 123456
+
+## Project Description
+
+### Features and Functionality of Jantrik Client Side
+
+* Custom Hooks: Custom hooks have been skillfully implemented to enhance the development process of the website.
+* Firebase Authentication: The website integrates a robust Firebase authentication system for user login and sign*up processes.
+* Full*Stack Capability: Utilizing MongoDB as the database, Jantrik is a comprehensive full*stack website.
+* Protected Pages: The site employs private routes to safeguard access to specific pages.
+* Optimized Images: The website prioritizes performance by incorporating optimized and compressed images.
+* User Access Levels: Jantrik offers two types of access * regular user and admin user access.
+* Technology Stack: The following technologies and libraries have been employed in the client*side development:
+  * React.js
+  * Tailwind CSS
+  * daysiUI
+  * Animate.css
+  * React Hook Form
+  * React Font Awesome
+  * React Firebase Hooks
+  * React Toastify
+  * React Query
+
+
+  Feel free to explore the Jantrik Carpentry Tools Manufacturer website and experience its wide array of features and functionalities. If you have any questions or feedback, please don't hesitate to reach out.
+
+Happy carpentry tool browsing and management! 🛠️🪚🪛
+
+This project is open source and contributions are welcome.
